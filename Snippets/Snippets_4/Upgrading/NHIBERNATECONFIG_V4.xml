@@ -1,0 +1,24 @@
+<!-- startcode NHIBERNATECONFIG_V4 -->
+<appSettings>
+<!-- dialect is the only required NHibernate property -->
+<add key="NServiceBus/Persistence/NHibernate/dialect" value="NHibernate.Dialect.MsSql2008Dialect"/>
+<!-- other optional settings examples -->
+<add key="NServiceBus/Persistence/NHibernate/connection.provider" value="NHibernate.Connection.DriverConnectionProvider"/>
+<add key="NServiceBus/Persistence/NHibernate/connection.driver_class" value="NHibernate.Driver.Sql2008ClientDriver" />
+
+<!-- For more settings: 
+see http://www.nhforge.org/doc/nh/en/#configuration-hibernatejdbc 
+and http://www.nhforge.org/doc/nh/en/#configuration-optional 
+-->
+</appSettings>
+<connectionStrings>
+<!-- Default connection string for all Nhibernate/Sql persisters -->
+<add name="NServiceBus/Persistence" connectionString="Data Source=.\SQLEXPRESS;Initial Catalog=nservicebus; Integrated Security=True"/>
+<!-- Optional overrides per persister -->
+<add name="NServiceBus/Persistence/NHibernate/Timeout" connectionString="Data Source=.\SQLEXPRESS;Initial Catalog=timeout; Integrated Security=True"/>
+<add name="NServiceBus/Persistence/NHibernate/Saga" connectionString="Data Source=.\SQLEXPRESS;Initial Catalog=sagas; Integrated Security=True"/>
+<add name="NServiceBus/Persistence/NHibernate/Subscription" connectionString="Data Source=.\SQLEXPRESS;Initial Catalog=subscription; Integrated Security=True"/>
+<add name="NServiceBus/Persistence/NHibernate/Gateway" connectionString="Data Source=.\SQLEXPRESS;Initial Catalog=gateway; Integrated Security=True"/>
+<add name="NServiceBus/Persistence/NHibernate/Distributor" connectionString="Data Source=.\SQLEXPRESS;Initial Catalog=distributor; Integrated Security=True"/>
+</connectionStrings>
+<!--endcode -->

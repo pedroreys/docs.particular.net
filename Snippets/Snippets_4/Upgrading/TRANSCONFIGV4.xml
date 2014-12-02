@@ -1,0 +1,19 @@
+<!-- startcode TRANSCONFIGV4 -->
+<connectionStrings>
+<!-- MSMQ -->
+<add name="NServiceBus/Transport" connectionString="deadLetter=true;
+   journal=true;useTransactionalQueues=true;
+   cacheSendConnection=true"/>
+<!-- ActiveMQ -->
+<add name="NServiceBus/Transport" 
+   connectionString="ServerUrl=activemq:tcp://localhost:61616"/>
+<!-- RabbitMQ-->
+<add name="NServiceBus/Transport" 
+   connectionString="host=localhost"/>
+<!-- SqlServer -->
+<add name="NServiceBus/Transport" 
+   connectionString="Data Source=.\SQLEXPRESS;Initial Catalog=nservicebus;
+   Integrated Security=True"
+/>
+</connectionStrings>
+<!--endcode -->
