@@ -91,3 +91,6 @@ Fody/.DS_Store
 *.jtconfig
 
 *nsb_log*
+
+# Resharper
+*.DotSettings
